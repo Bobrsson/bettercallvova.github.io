@@ -18,33 +18,43 @@
     }
 
     body {
-      background: black;
-      overflow: hidden;
+      background: linear-gradient(
+        to bottom,
+        #1e1e1e 0%,
+        #2b2b2b 50%,
+        #1e1e1e 100%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .hero {
-      width: 100vw;
-      height: 100vh;
+    .container {
+      width: 100%;
+      max-height: 100vh;
 
-      background-image: url("./callvova.jpg");
-      background-repeat: no-repeat;
-      background-position: center;
-
-      /* БАЗОВАЯ АДАПТАЦИЯ */
-      background-size: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    /* Широкие экраны (ноут / десктоп) */
-    @media (min-aspect-ratio: 16/9) {
-      .hero {
-        background-size: cover;
-      }
+    img {
+      width: 100%;
+      height: auto;
+
+      /* чтобы не выходила за экран по высоте */
+      max-height: 100vh;
+
+      /* убираем размытие */
+      object-fit: contain;
     }
   </style>
 </head>
 <body>
 
-  <div class="hero"></div>
+  <div class="container">
+    <img src="./callvova.jpg" alt="Better Call Vova">
+  </div>
 
 </body>
 </html>
