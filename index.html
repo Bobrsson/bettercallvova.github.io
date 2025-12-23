@@ -6,7 +6,6 @@
   <title>Сайт-визитка</title>
 
   <style>
-    /* Сброс */
     * {
       margin: 0;
       padding: 0;
@@ -23,14 +22,13 @@
       overflow: hidden;
     }
 
-    /* Фон на весь экран */
     .hero {
       width: 100vw;
       height: 100vh;
 
-      background-image: url("callvova.jpg"); /* ← ТВОЯ КАРТИНКА */
-      background-size: cover;      /* растягивается */
-      background-position: center; /* центрируется */
+      background-image: url("./callvova.jpg");
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
 
       display: flex;
@@ -38,7 +36,6 @@
       justify-content: center;
     }
 
-    /* Затемнение для читаемости текста */
     .overlay {
       background: rgba(0, 0, 0, 0.45);
       padding: 40px 60px;
@@ -57,7 +54,6 @@
       opacity: 0.9;
     }
 
-    /* Адаптация под мобильные */
     @media (max-width: 600px) {
       .overlay {
         padding: 24px;
@@ -66,4 +62,14 @@
     }
   </style>
 </head>
+<body>
+
+  <div class="hero">
+    <div class="overlay">
+      <h1>Better Call Vova</h1>
+      <p>Backend Developer · Go · Fintech</p>
+    </div>
+  </div>
+
+</body>
 </html>
