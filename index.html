@@ -18,6 +18,7 @@
     }
 
     body {
+      background: black;
       overflow: hidden;
     }
 
@@ -26,9 +27,18 @@
       height: 100vh;
 
       background-image: url("./callvova.jpg");
-      background-size: cover;
-      background-position: center;
       background-repeat: no-repeat;
+      background-position: center;
+
+      /* БАЗОВАЯ АДАПТАЦИЯ */
+      background-size: contain;
+    }
+
+    /* Широкие экраны (ноут / десктоп) */
+    @media (min-aspect-ratio: 16/9) {
+      .hero {
+        background-size: cover;
+      }
     }
   </style>
 </head>
